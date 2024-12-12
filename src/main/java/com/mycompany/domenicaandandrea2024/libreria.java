@@ -1,20 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package com.mycompany.domenicaandandrea2024;
 
-/**
- *
- * @author and_j
- */
+
 public class libreria {
 
-    /**
-     * @param args the command line arguments
-     */
+     
     public static void main(String[] args) {
-        // TODO code application logic here
+        Clientes cliente = new Clientes("Bianca Luciana");
+        
+
+        // Crear productos con sus categorías
+        Libro Ficcion = new Libro("Ficcion", 2.50, Genero.FICCION);
+        Libro Educativo = new Libro("Pastel", 3.75, Genero.EDUCATIVO);
+
+        // Crear un pedido
+        Compras compras = new Compras();
+
+        // Mostrar los detalles de los productos con IVA
+        compras.mostrarDetalleLibro(Ficcion);
+        compras.mostrarDetalleLibro(Educativo);
+
+        // Mostrar la relación entre el cliente y los productos
+        compras.mostrarClientesYLibro(cliente, Ficcion);
+        
     }
     
 }
